@@ -1,0 +1,293 @@
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+
+/* MENÚ */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    background-color: #0b3d91;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu li a:hover {
+    background-color: #ffffff;
+    color: #0b3d91;
+}
+
+
+/* INICIO */
+
+.inicio {
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg,
+        #0b3d91,
+        #1d5db5,
+        #6c757d
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 40px;
+}
+
+.contenido-inicio {
+    max-width: 800px;
+    color: white;
+}
+
+.contenido-inicio h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+}
+
+.contenido-inicio p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: white;
+    color: #0b3d91;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #d9d9d9;
+    transform: scale(1.05);
+}
+
+
+/* SECCIONES */
+
+.seccion {
+    min-height: 80vh;
+    padding: 110px 8% 80px;
+    text-align: center;
+}
+
+.seccion h2 {
+    color: #0b3d91;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    color: #666666;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.gris {
+    background-color: #eef1f5;
+}
+
+
+/* TARJETAS DE INTEGRANTES */
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.tarjeta {
+    width: 300px;
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    border-top: 5px solid #0b3d91;
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: #0b3d91;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+.tarjeta span {
+    color: #6c757d;
+    font-weight: bold;
+}
+
+.tarjeta p {
+    margin-top: 18px;
+    line-height: 1.6;
+    color: #555555;
+}
+
+
+/* CONTENIDO */
+
+.contenido {
+    max-width: 950px;
+    margin: auto;
+}
+
+.contenido p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #444444;
+    margin-bottom: 20px;
+}
+
+
+/* OBJETIVOS */
+
+.objetivos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.objetivos div {
+    background-color: white;
+    width: 270px;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #0b3d91;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.objetivos h3 {
+    color: #0b3d91;
+    margin-bottom: 15px;
+}
+
+.objetivos p {
+    font-size: 16px;
+}
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #263238;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #cfd8dc;
+    margin: 7px;
+}
+
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo {
+        margin-bottom: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .contenido-inicio h1 {
+        font-size: 40px;
+    }
+
+    .contenido-inicio p {
+        font-size: 17px;
+    }
+
+    .seccion h2 {
+        font-size: 32px;
+    }
+}
+.logo-bmw {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.tarjeta:hover .logo-bmw {
+    transform: scale(1.1);
+}
